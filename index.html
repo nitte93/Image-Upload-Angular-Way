@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app = "fileUpload">
+    <div ng-controller = "uploadController as upCtrl">
+      <h1>Angular File Upload!</h1>
+       <div>    
+        <lable for="fileType">FileType allowed:</lable><span id="fileType" name="fileType"> {{upCtrl.extntionArray}}</span>
+       </div>
+       <br>
+      <form>
+        <label for="inputFile">File input:</label>
+        <input type="file" name="fileName" id="inputFile"  upload  accept="image/*"/>
+      </form>
+      <h2>Your image will be displayed below</h2>
+      <img id="displayImage"/>
+    </div>
+  </body>
+
+</html>
